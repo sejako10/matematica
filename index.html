@@ -12,14 +12,10 @@
             text-align: center;
             padding: 20px;
         }
-        h1 {
-            font-size: 3em;
-        }
-        .romania {
-            color: white;
-        }
-        .hub {
-            color: orange;
+        .logo {
+            display: block;
+            margin: 0 auto;
+            max-width: 300px;
         }
         .rules {
             background: rgba(255, 255, 255, 0.1);
@@ -42,13 +38,31 @@
         .links a {
             color: cyan;
             text-decoration: none;
-            display: block;
-            margin: 5px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2em;
+            font-weight: bold;
+            margin: 10px auto;
+            width: 250px;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+        .links a:hover {
+            transform: scale(1.1);
+            background: rgba(255, 255, 255, 0.2);
+        }
+        .links img {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
         }
     </style>
 </head>
 <body>
-    <h1><span class="romania">Romania</span> <span class="hub">Hub</span></h1>
+    <img src="Romania-hub.png" alt="Romania Hub Logo" class="logo">
     <div class="rules">
         <h2>📜 Regulamentul Grupului ⚠️</h2>
         <p>🔞 INTERZIS MINORI ➡️ BAN</p>
@@ -68,10 +82,14 @@
     </div>
     <div class="links">
         <h2>⚡️Link-uri ale comunității ⚡️</h2>
-        <a href="https://x.com/romaniahub1?s=21&t=v04Wt1pyjLrYNxPC6JBO4g" target="_blank">🔗 Share: Twitter/X</a>
-        <a href="https://chat.whatsapp.com/G8UWQjvbRGr3pLkUWbfE4G" target="_blank">🔗 Share: WhatsApp</a>
-        <a href="https://t.me/+KYr84LWAWJs4OTY0" target="_blank">🔗 Share: RomaniaHub 1</a>
-        <a href="https://t.me/ROhub2" target="_blank">🔗 Share: RomaniaHub 2 (full RO)</a>
+        <a href="https://x.com/romaniahub1?s=21&t=v04Wt1pyjLrYNxPC6JBO4g" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/60/X_logo_2023_original.svg" alt="X/Twitter">Share: Twitter/X</a>
+        <a href="https://chat.whatsapp.com/G8UWQjvbRGr3pLkUWbfE4G" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">Share: WhatsApp</a>
+        <a href="https://t.me/+KYr84LWAWJs4OTY0" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram">Share: RomaniaHub 1</a>
+        <a href="https://t.me/ROhub2" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram">Share: RomaniaHub 2 (full RO)</a>
     </div>
 </body>
 </html>
