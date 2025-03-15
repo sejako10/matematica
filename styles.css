@@ -1,78 +1,73 @@
 body {
+    font-family: Arial, sans-serif;
     background-color: #121212;
     color: white;
-    font-family: Arial, sans-serif;
     text-align: center;
     margin: 0;
     padding: 0;
 }
 
-.logo-container {
-    margin: 20px 0;
+header {
+    padding: 20px;
 }
 
 .logo {
-    width: 250px;
-}
-
-.comunitate h2, .regulament h2 {
-    color: #f4a100;
+    max-width: 300px;
 }
 
 .links {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
-.link {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    background-color: #222;
-    padding: 10px 15px;
-    border-radius: 8px;
+h2 {
+    color: #FFA500;
+}
+
+.btn {
+    display: block;
+    margin: 10px auto;
+    padding: 12px 20px;
+    width: 80%;
+    max-width: 300px;
+    font-size: 18px;
     text-decoration: none;
     color: white;
-    font-weight: bold;
-    transition: transform 0.3s, background-color 0.3s;
+    border-radius: 8px;
+    transition: 0.3s;
 }
 
-.link:hover {
-    background-color: #f4a100;
+.twitter { background: #1DA1F2; }
+.whatsapp { background: #25D366; }
+.telegram { background: #0088CC; }
+
+.btn:hover {
+    opacity: 0.8;
     transform: scale(1.05);
 }
 
-.link img {
-    width: 20px;
-}
-
-.regulament {
-    background-color: #222;
+.rules {
+    margin-top: 30px;
+    background: #222;
     padding: 20px;
     border-radius: 10px;
-    width: 80%;
-    margin: 20px auto;
-    transition: background-color 0.3s;
+    width: 90%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.regulament:hover {
-    background-color: #333;
+.rules ul {
+    list-style: none;
+    padding: 0;
 }
 
-.ban {
-    color: red;
-    font-weight: bold;
+.rules li {
+    padding: 5px 0;
+    font-size: 16px;
+    transition: 0.3s;
 }
 
-.mute-ban {
-    color: orange;
-    font-weight: bold;
-}
-
-.mute {
-    color: yellow;
-    font-weight: bold;
+.rules li:hover {
+    transform: scale(1.05);
+    color: #FFA500;
 }
