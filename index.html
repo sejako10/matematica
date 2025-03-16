@@ -19,64 +19,24 @@
         }
 
         .logo-container {
-            margin: 20px 0;
+            margin-bottom: 15px;
         }
 
         .logo {
-            max-width: 350px;
+            max-width: 350px; /* Logo mărit */
             width: 100%;
             height: auto;
             display: block;
         }
 
-        .links {
-            width: 95%;
-            max-width: 600px;
-            margin-bottom: 20px;
-        }
-
-        .links h2 {
-            margin-bottom: 15px;
-            font-size: 1.3em;
-        }
-
-        .links a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 8px;
-            padding: 12px;
-            margin: 8px 0;
-            color: cyan;
-            text-decoration: none;
-            font-size: 1.1em;
-            font-weight: bold;
-            transition: background 0.3s ease, transform 0.2s ease;
-            width: 30%; /* Lățime redusă */
-            max-width: 150px; /* Lățime maximă redusă */
-            margin: 8px auto;
-        }
-
-        .links a:hover {
-            background: rgba(255, 255, 255, 0.2);
-            transform: scale(1.03);
-        }
-
-        .links img {
-            width: 25px;
-            height: 25px;
-            margin-right: 10px;
-        }
-
         .rules {
             background: rgba(255, 255, 255, 0.1);
-            border-radius: 8px;
             padding: 15px;
-            width: 95%;
-            max-width: 600px;
+            border-radius: 8px;
             text-align: left;
-            transition: transform 0.2s ease;
+            max-width: 95%;
+            margin: 10px;
+            transition: transform 0.3s ease;
         }
 
         .rules:hover {
@@ -87,13 +47,52 @@
             color: yellow;
             text-align: center;
             margin-bottom: 10px;
-            font-size: 1.2em;
+            font-size: 1.1em;
         }
 
         .rules p {
             margin: 5px 0;
             line-height: 1.5;
             font-size: 0.9em;
+        }
+
+        .links {
+            margin-top: 20px;
+            width: 95%;
+            max-width: 600px;
+        }
+
+        .links h2 {
+            margin-bottom: 15px;
+            font-size: 1.3em; /* Font mărit */
+        }
+
+        .links a {
+            color: cyan;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1em; /* Font mărit */
+            font-weight: bold;
+            margin: 8px auto;
+            width: 80%; /* Banda redusă */
+            max-width: 400px; /* Banda redusă */
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        .links a:hover {
+            transform: scale(1.05);
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .links img {
+            width: 25px;
+            height: 25px;
+            margin-right: 8px;
         }
     </style>
 </head>
