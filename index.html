@@ -3,150 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Romania Hub</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <title>Romania Hub | Comunitate Online</title>
     <style>
+        :root {
+            --primary: #FFD700;
+            --secondary: #0066CC;
+            --accent: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            background-color: #121212; /* Darker background */
-            color: #f5f5f5; /* Light grey text for better readability on dark */
-            font-family: 'Montserrat', sans-serif; /* Using Montserrat as primary body font */
-            text-align: center;
-            padding: 20px; /* Increased padding */
+            background: #0A0A0A;
+            color: var(--accent);
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            line-height: 1.6;
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            background-image: linear-gradient(to bottom, #0a0a0a, #121212); /* Subtle gradient */
+            padding: 2rem 1rem;
         }
 
-        .logo-container {
-            margin-bottom: 20px; /* Increased margin */
+        .header {
+            text-align: center;
+            margin-bottom: 2.5rem;
         }
 
         .logo {
-            max-width: 350px;
-            width: 100%;
+            width: min(100%, 480px);
             height: auto;
-            display: block;
-            transition: opacity 0.3s ease; /* Subtle transition for logo hover */
+            margin: 1rem 0;
+            filter: drop-shadow(0 0 12px rgba(255, 215, 0, 0.2));
         }
 
-        .logo:hover {
-            opacity: 0.8; /* Slightly fade on hover */
+        .content-wrapper {
+            display: grid;
+            gap: 2rem;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
-        .rules {
-            background: rgba(255, 255, 255, 0.05); /* Darker, more subtle background */
-            padding: 20px; /* Increased padding */
-            border-radius: 12px; /* More pronounced rounded corners */
-            text-align: left;
-            max-width: 90%; /* Slightly reduced max-width */
-            margin: 15px; /* Increased margin */
-            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow transition */
-            border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+        .links-section {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 2rem;
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        .rules:hover {
-            transform: scale(1.03);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow on hover */
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
         }
 
-        .rules h2 {
-            color: #ffc107; /* Gold accent color */
-            text-align: center;
-            margin-bottom: 15px; /* Increased margin */
-            font-size: 1.2em; /* Slightly larger font */
-            font-family: 'Lora', serif; /* Using Lora for headings */
-            font-weight: bold;
-        }
-
-        .rules p {
-            margin: 8px 0; /* Increased margin */
-            line-height: 1.6; /* Improved line height for readability */
-            font-size: 0.95em; /* Slightly larger font */
-        }
-
-        .links {
-            margin-top: 30px; /* Increased margin */
-            width: 90%; /* Slightly reduced width */
-            max-width: 550px; /* Adjusted max-width */
-        }
-
-        .links h2 {
-            margin-bottom: 20px; /* Increased margin */
-            font-size: 1.4em; /* Larger font */
-            font-family: 'Lora', serif; /* Using Lora for link heading */
-            font-weight: bold;
-            color: #f5f5f5; /* Ensuring heading is white */
-        }
-
-        .links a {
-            color: #80deea; /* Muted cyan accent */
-            text-decoration: none;
+        .community-link {
             display: flex;
             align-items: center;
-            justify-content: center;
-            font-size: 1.15em; /* Slightly larger font */
-            font-weight: bold;
-            margin: 10px auto; /* Increased margin */
-            width: 85%; /* Adjusted width */
-            max-width: 420px; /* Adjusted max-width */
-            padding: 15px; /* Increased padding */
-            background: rgba(255, 255, 255, 0.05); /* Darker background */
-            border-radius: 10px; /* More pronounced rounded corners */
-            transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease; /* Added color transition */
-            border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+            padding: 1rem;
+            background: linear-gradient(45deg, rgba(0, 102, 204, 0.15), rgba(255, 215, 0, 0.1));
+            border-radius: 12px;
+            color: var(--accent);
+            text-decoration: none;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        .links a:hover {
-            transform: scale(1.05);
-            background: rgba(255, 255, 255, 0.1);
-            color: #b2ebf2; /* Lighter cyan on hover */
+        .community-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(0, 102, 204, 0.2);
+            background: linear-gradient(45deg, rgba(0, 102, 204, 0.25), rgba(255, 215, 0, 0.2));
         }
 
-        .links img {
-            width: 28px; /* Slightly larger icon */
-            height: 28px; /* Slightly larger icon */
-            margin-right: 10px; /* Increased margin */
+        .link-icon {
+            width: 32px;
+            height: 32px;
+            margin-right: 1rem;
+            flex-shrink: 0;
         }
 
-        footer {
-            position: relative; /* For absolute positioning of copyright */
+        .rules-section {
+            background: rgba(0, 34, 68, 0.3);
+            border-radius: 16px;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255, 215, 0, 0.2);
+        }
+
+        .rules-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
-            padding: 10px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+        }
+
+        .rules-list {
+            list-style: none;
+            margin-top: 1.5rem;
+        }
+
+        .rules-list li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .rules-list li:last-child {
+            border-bottom: 0;
+        }
+
+        h1 {
+            color: var(--primary);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        h2 {
+            color: var(--primary);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
         }
 
         .copyright {
-            position: absolute;
-            bottom: 10px;
-            right: 10px;
-            font-size: 0.8em;
-            color: #9e9e9e; /* Light grey for copyright */
+            margin-top: 3rem;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
         }
-    </style>
-</head>
-<body>
-    <div class="logo-container">
-        <img src="Romania-hub-logo.png" alt="Romania Hub Logo" class="logo">
-    </div>
-    <div class="rules">
-        <h2>Reguli Importante</h2>
-        <p>Acesta este un text de exemplu pentru regulile hub-ului Romania. Vă rugăm să respectați aceste reguli pentru a menține un mediu pozitiv și constructiv.</p>
-        <p>Asigurați-vă că sunteți respectuos cu ceilalți membri și evitați orice formă de comportament inadecvat.</p>
-        <p>Nu distribuiți informații false sau înșelătoare.</p>
-        <p>Participați activ și contribuiți la discuții într-un mod constructiv.</p>
-    </div>
-    <div class="links">
-        <h2>Link-uri Utile</h2>
-        <a href="#"><img src="link-icon.png" alt="Link Icon">Link către Resursa 1</a>
-        <a href="#"><img src="link-icon.png" alt="Link Icon">Link către Resursa 2</a>
-        <a href="#"><img src="link-icon.png" alt="Link Icon">Link către Resursa 3</a>
-    </div>
-    <footer>
-        <p class="copyright">© 2025 Romania hub mic</p>
-    </footer>
-</body>
-</html>
+
+        @media (min-width: 768px) {
+            .content-wrapper {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            h1 {
+                font-size: 3rem;
+            }
+
+            h2 {
+                font-size: 1.75rem;
+            }
