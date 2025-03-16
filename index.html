@@ -3,14 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Romania Hub | Comunitate Online</title>
+    <title>Romania Hub</title>
     <style>
-        :root {
-            --primary: #FFD700;
-            --secondary: #0066CC;
-            --accent: #FFFFFF;
-        }
-
         * {
             margin: 0;
             padding: 0;
@@ -18,140 +12,185 @@
         }
 
         body {
-            background: #0A0A0A;
-            color: var(--accent);
-            font-family: 'Segoe UI', system-ui, sans-serif;
-            line-height: 1.6;
+            background-color: #000;
+            color: #fff;
+            font-family: 'Arial', sans-serif;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 2rem 1rem;
+            justify-content: space-between;
+            padding: 20px;
         }
 
-        .header {
+        .container {
+            max-width: 900px;
+            width: 100%;
             text-align: center;
-            margin-bottom: 2.5rem;
+        }
+
+        .logo-container {
+            margin: 20px 0;
         }
 
         .logo {
-            width: min(100%, 480px);
-            height: auto;
-            margin: 1rem 0;
-            filter: drop-shadow(0 0 12px rgba(255, 215, 0, 0.2));
-        }
-
-        .content-wrapper {
-            display: grid;
-            gap: 2rem;
+            max-width: 400px;
             width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
+            height: auto;
+            transition: transform 0.3s ease;
         }
 
-        .links-section {
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 16px;
-            padding: 2rem;
-            backdrop-filter: blur(8px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        .links {
+            margin: 30px 0;
+        }
+
+        .links h2 {
+            color: #fff;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .links-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 1rem;
-            margin-top: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            padding: 0 10px;
         }
 
-        .community-link {
+        .links a {
+            color: cyan;
+            text-decoration: none;
+            font-size: 1.1em;
+            font-weight: bold;
             display: flex;
             align-items: center;
-            padding: 1rem;
-            background: linear-gradient(45deg, rgba(0, 102, 204, 0.15), rgba(255, 215, 0, 0.1));
-            border-radius: 12px;
-            color: var(--accent);
-            text-decoration: none;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            justify-content: center;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            transition: all 0.3s ease;
         }
 
-        .community-link:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 20px rgba(0, 102, 204, 0.2);
-            background: linear-gradient(45deg, rgba(0, 102, 204, 0.25), rgba(255, 215, 0, 0.2));
+        .links a:hover {
+            transform: translateY(-3px);
+            background: rgba(255, 255, 255, 0.25);
         }
 
-        .link-icon {
-            width: 32px;
-            height: 32px;
-            margin-right: 1rem;
-            flex-shrink: 0;
+        .links img {
+            width: 28px;
+            height: 28px;
+            margin-right: 10px;
         }
 
-        .rules-section {
-            background: rgba(0, 34, 68, 0.3);
-            border-radius: 16px;
-            padding: 2rem;
-            position: relative;
-            overflow: hidden;
-            border: 1px solid rgba(255, 215, 0, 0.2);
+        .rules {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            max-width: 100%;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
         }
 
-        .rules-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
+        .rules:hover {
+            transform: scale(1.01);
         }
 
-        .rules-list {
-            list-style: none;
-            margin-top: 1.5rem;
+        .rules h2 {
+            color: yellow;
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            text-transform: uppercase;
         }
 
-        .rules-list li {
-            padding: 0.8rem 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        .rules p {
+            font-size: 1em;
+            line-height: 1.6;
+            margin: 8px 0;
+            text-align: left;
         }
 
-        .rules-list li:last-child {
-            border-bottom: 0;
+        .footer {
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #888;
         }
 
-        h1 {
-            color: var(--primary);
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-        }
-
-        h2 {
-            color: var(--primary);
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-            text-align: center;
-        }
-
-        .copyright {
-            margin-top: 3rem;
-            text-align: center;
-            color: rgba(255, 255, 255, 0.6);
-            font-size: 0.9rem;
-        }
-
-        @media (min-width: 768px) {
-            .content-wrapper {
-                grid-template-columns: 1fr 1fr;
+        @media (max-width: 600px) {
+            .logo {
+                max-width: 300px;
             }
 
-            h1 {
-                font-size: 3rem;
+            .links h2 {
+                font-size: 1.2em;
             }
 
-            h2 {
-                font-size: 1.75rem;
+            .links a {
+                font-size: 1em;
+                padding: 12px;
             }
+
+            .rules h2 {
+                font-size: 1.2em;
+            }
+
+            .rules p {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo-container">
+            <img src="Romania-hub (1).png" alt="Romania Hub Logo" class="logo">
+        </div>
+
+        <div class="links">
+            <h2>⚡️ Link-uri ale comunității ⚡️</h2>
+            <div class="links-grid">
+                <a href="https://x.com/romaniahub1?s=21&t=v04Wt1pyjLrYNxPC6JBO4g" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/X_logo_2023.svg" alt="X / Twitter"> X / Twitter
+                </a>
+                <a href="https://chat.whatsapp.com/G8UWQjvbRGr3pLkUWbfE4G" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"> WhatsApp
+                </a>
+                <a href="https://t.me/+KYr84LWAWJs4OTY0" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram"> RomaniaHub 1
+                </a>
+                <a href="https://t.me/ROhub2" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram"> RomaniaHub 2 (full RO)
+                </a>
+            </div>
+        </div>
+
+        <div class="rules">
+            <h2>📜 Regulamentul Grupului ⚠️</h2>
+            <p>🔞 INTERZIS MINORI ➡️ BAN</p>
+            <p>🚫 Gore, Zoo, Pedo, Accidente auto, Spam, Flood ➡️ BAN</p>
+            <p>🚫 Reclame la alte grupuri ➡️ BAN</p>
+            <p>🚫 Publicitate fără acordul administratorilor ➡️ BAN</p>
+            <p>🚫 Jigniri la adresa ADMINILOR ➡️ MUTE/BAN</p>
+            <p>🚫 Limbaj obscen este descurajat și poate duce la sancțiuni ➡️ MUTE/BAN</p>
+            <p>🚫 Limbaj ofensator sau discriminatoriu (rasist, sexist etc.) ➡️ MUTE/BAN</p>
+            <p>🚫 Discuții conflictuale sau provocatoare fără motiv justificat ➡️ MUTE/BAN</p>
+            <p>🚫 Deranjarea grupului prin apeluri pe Voice Chat ➡️ MUTE/BAN</p>
+            <p>🚫 Cereri de bani sau donații fără aprobare ➡️ MUTE/BAN</p>
+            <p>🚫 Trade/Schimburi în privat ➡️ 3-5 zile MUTE</p>
+            <p>⭐️ Fii concis și la obiect în mesajele tale.</p>
+            <p>⚠️ BAN pentru cine își postează PULA!</p>
+            <p>🔄 Respectă pentru a fi respectat!</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        © 2025 Romania Hub. Toate drepturile rezervate.
+    </div>
+</body>
+</html>
