@@ -1,176 +1,178 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Romania hub</title>
-  <style>
-    /* Reset și stiluri de bază */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      background-color: #000;
-      color: #fff;
-      font-family: Arial, sans-serif;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
-    main {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-    }
-    /* Logo cu efect */
-    .logo-container {
-      margin-bottom: 20px;
-    }
-    .logo {
-      max-width: 350px;
-      width: 100%;
-      height: auto;
-      filter: drop-shadow(0px 0px 10px cyan);
-      animation: rotateLogo 10s linear infinite; /* Adăugăm animația */
-    }
-    /* Animație rotație logo */
-    @keyframes rotateLogo {
-      0% {
-        transform: rotate(0deg);
-      }
-      100% {
-        transform: rotate(360deg);
-      }
-    }
-    /* Link-uri */
-    .links {
-      width: 100%;
-      max-width: 600px;
-      margin-bottom: 20px;
-      text-align: center;
-    }
-    .links h2 {
-      font-size: 1.5em;
-      margin-bottom: 15px;
-      text-align: center;
-    }
-    .link-item {
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 8px;
-      margin: 10px 0;
-      transition: background 0.3s ease, transform 0.3s ease;
-    }
-    .link-item a {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 12px;
-      color: cyan;
-      text-decoration: none;
-      font-size: 1.1em;
-      font-weight: bold;
-    }
-    .link-item a img {
-      width: 25px;
-      height: 25px;
-      margin-right: 8px;
-    }
-    .link-item:hover {
-      transform: scale(1.05);
-      background: rgba(255, 255, 255, 0.2);
-    }
-    /* Regulament */
-    .rules {
-      background: rgba(255, 255, 255, 0.1);
-      padding: 15px;
-      border-radius: 8px;
-      width: 100%;
-      max-width: 600px;
-      margin-bottom: 20px;
-      transition: transform 0.3s ease;
-    }
-    .rules:hover {
-      transform: scale(1.02);
-    }
-    .rules h2 {
-      color: yellow;
-      text-align: center;
-      margin-bottom: 10px;
-      font-size: 1.3em;
-    }
-    .rules p {
-      margin: 5px 0;
-      line-height: 1.5;
-      font-size: 0.9em;
-    }
-    /* Footer */
-    footer {
-      text-align: center;
-      padding: 15px;
-      background-color: #111;
-    }
-    footer p {
-      font-size: 0.8em;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Romania hub</title>
+    <style>
+        /* Reset și stiluri de bază */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        /* Logo cu efect */
+        .logo-container {
+            margin-bottom: 20px;
+        }
+        @keyframes spinAndPulse {
+            0% {
+                transform: rotate(0deg) scale(1);
+            }
+            50% {
+                transform: rotate(180deg) scale(1.1);
+            }
+            100% {
+                transform: rotate(360deg) scale(1);
+            }
+        }
+        .logo {
+            max-width: 350px;
+            width: 100%;
+            height: auto;
+            filter: drop-shadow(0px 0px 10px cyan);
+            animation: spinAndPulse 5s infinite; /* Combinație de rotire și pulsare */
+        }
+        /* Link-uri */
+        .links {
+            width: 100%;
+            max-width: 600px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .links h2 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        .link-item {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            margin: 10px 0;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+        .link-item a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px;
+            color: cyan;
+            text-decoration: none;
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+        .link-item a img {
+            width: 25px;
+            height: 25px;
+            margin-right: 8px;
+        }
+        .link-item:hover {
+            transform: scale(1.05);
+            background: rgba(255, 255, 255, 0.2);
+        }
+        /* Regulament */
+        .rules {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 600px;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+        .rules:hover {
+            transform: scale(1.02);
+        }
+        .rules h2 {
+            color: yellow;
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+        .rules p {
+            margin: 5px 0;
+            line-height: 1.5;
+            font-size: 0.9em;
+        }
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #111;
+        }
+        footer p {
+            font-size: 0.8em;
+        }
+    </style>
 </head>
 <body>
-  <main>
-    <div class="logo-container">
-      <img src="Romania-hub (1).png" alt="Romania hub Logo" class="logo">
-    </div>
-    <div class="links">
-      <h2>⚡️ Official Link ⚡️</h2>
-      <div class="link-item">
-        <a href="https://x.com/romaniahub1?s=21&t=v04Wt1pyjLrYNxPC6JBO4g" target="_blank">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/X_logo_2023.svg" alt="X / Twitter">
-          Share: X / Twitter
-        </a>
-      </div>
-      <div class="link-item">
-        <a href="https://chat.whatsapp.com/G8UWQjvbRGr3pLkUWbfE4G" target="_blank">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-          Share: WhatsApp
-        </a>
-      </div>
-      <div class="link-item">
-        <a href="https://t.me/+KYr84LWAWJs4OTY0" target="_blank">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram">
-          Share: Romaniahub 1
-        </a>
-      </div>
-      <div class="link-item">
-        <a href="https://t.me/ROhub2" target="_blank">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram">
-          Share: Romaniahub 2 (full RO)
-        </a>
-      </div>
-    </div>
-    <div class="rules">
-      <h2>📜 Regulamentul Grupului ⚠️</h2>
-      <p>🔞 INTERZIS MINORI ➡️ BAN</p>
-      <p>🚫 Gore, Zoo, Pedo, Accidente auto, Spam, Flood ➡️ BAN</p>
-      <p>🚫 Reclame la alte grupuri ➡️ BAN</p>
-      <p>🚫 Publicitate fără acordul administratorilor ➡️ BAN</p>
-      <p>🚫 Jigniri la adresa ADMINILOR ➡️ MUTE/BAN</p>
-      <p>🚫 Limbaj obscen este descurajat și poate duce la sancțiuni ➡️ MUTE/BAN</p>
-      <p>🚫 Limbaj ofensator sau discriminatoriu (rasist, sexist etc.) ➡️ MUTE/BAN</p>
-      <p>🚫 Discuții conflictuale sau provocatoare fără motiv justificat ➡️ MUTE/BAN</p>
-      <p>🚫 Deranjarea grupului prin apeluri pe Voice Chat ➡️ MUTE/BAN</p>
-      <p>🚫 Cereri de bani sau donații fără aprobare ➡️ MUTE/BAN</p>
-      <p>🚫 Trade/Schimburi în privat ➡️ 3-5 zile MUTE</p>
-      <p>⭐️ Fii concis și la obiect în mesajele tale.</p>
-      <p>⚠️ BAN pentru cine își postează PULA!</p>
-      <p>🔄 Respectă pentru a fi respectat!</p>
-    </div>
-  </main>
-  <footer>
-    <p> Copyright &copy; 2025 Romania hub. All rights reserved.</p>
-  </footer>
+    <main>
+        <div class="logo-container">
+            <img src="Romania-hub (1).png" alt="Romania hub Logo" class="logo">
+        </div>
+        <div class="links">
+            <h2>⚡️ Official Link ⚡️</h2>
+            <div class="link-item">
+                <a href="https://x.com/romaniahub1?s=21&t=v04Wt1pyjLrYNxPC6JBO4g" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/X_logo_2023.svg" alt="X / Twitter">
+                    Share: X / Twitter
+                </a>
+            </div>
+            <div class="link-item">
+                <a href="https://chat.whatsapp.com/G8UWQjvbRGr3pLkUWbfE4G" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+                    Share: WhatsApp
+                </a>
+            </div>
+            <div class="link-item">
+                <a href="https://t.me/+KYr84LWAWJs4OTY0" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram">
+                    Share: Romaniahub 1
+                </a>
+            </div>
+            <div class="link-item">
+                <a href="https://t.me/ROhub2" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram">
+                    Share: Romaniahub 2 (full RO)
+                </a>
+            </div>
+        </div>
+        <div class="rules">
+            <h2>📜 Regulamentul Grupului ⚠️</h2>
+            <p>🔞 INTERZIS MINORI ➡️ BAN</p>
+            <p>🚫 Gore, Zoo, Pedo, Accidente auto, Spam, Flood ➡️ BAN</p>
+            <p>🚫 Reclame la alte grupuri ➡️ BAN</p>
+            <p>🚫 Publicitate fără acordul administratorilor ➡️ BAN</p>
+            <p>🚫 Jigniri la adresa ADMINILOR ➡️ MUTE/BAN</p>
+            <p>🚫 Limbaj obscen este descurajat și poate duce la sancțiuni ➡️ MUTE/BAN</p>
+            <p>🚫 Limbaj ofensator sau discriminatoriu (rasist, sexist etc.) ➡️ MUTE/BAN</p>
+            <p>🚫 Discuții conflictuale sau provocatoare fără motiv justificat ➡️ MUTE/BAN</p>
+            <p>🚫 Deranjarea grupului prin apeluri pe Voice Chat ➡️ MUTE/BAN</p>
+            <p>🚫 Cereri de bani sau donații fără aprobare ➡️ MUTE/BAN</p>
+            <p>🚫 Trade/Schimburi în privat ➡️ 3-5 zile MUTE</p>
+            <p>⭐️ Fii concis și la obiect în mesajele tale.</p>
+            <p>⚠️ BAN pentru cine își postează PULA!</p>
+            <p>🔄 Respectă pentru a fi respectat!</p>
+        </div>
+    </main>
+    <footer>
+        <p> Copyright &copy; 2025 Romania hub. All rights reserved.</p>
+    </footer>
 </body>
 </html>
