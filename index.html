@@ -87,19 +87,19 @@
       transform: scale(1.02);
     }
     .rules h2 {
-      color: white;
+      color: white; /* Keep the rest white */
       text-align: center;
       margin-bottom: 10px;
       font-size: 1.3em;
     }
     .rules h2 span {
-      color: orange;
+      color: orange; /* Only "Grupului" is orange */
     }
     .rules p {
       margin: 5px 0;
       line-height: 1.5;
       font-size: 0.9em;
-      color: white;
+      color: white; /* Keep the text white */
     }
     /* Footer */
     footer {
@@ -111,11 +111,11 @@
       font-size: 0.8em;
     }
     /* Custom styling for specific elements in the links section */
-    .link-item a span {
-      color: orange;
-    }
     .link-item a .share-text {
-      color: white;
+      color: white; /* Share text color */
+    }
+    .link-item a .share-link {
+      color: orange; /* Link specific color */
     }
   </style>
 </head>
@@ -129,30 +129,30 @@
       <div class="link-item">
         <a href="https://x.com/romaniahub1?s=21&t=v04Wt1pyjLrYNxPC6JBO4g" target="_blank">
           <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/X_logo_2023.svg" alt="X / Twitter">
-          <span class="share-text">Share:</span> <span>X / Twitter</span>
+          <span class="share-text">Share: </span><span class="share-link">X / Twitter</span>
         </a>
       </div>
       <div class="link-item">
         <a href="https://chat.whatsapp.com/G8UWQjvbRGr3pLkUWbfE4G" target="_blank">
           <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-          <span class="share-text">Share:</span> <span>WhatsApp</span>
+          <span class="share-text">Share: </span><span class="share-link">WhatsApp</span>
         </a>
       </div>
       <div class="link-item">
         <a href="https://t.me/+KYr84LWAWJs4OTY0" target="_blank">
           <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram">
-          <span class="share-text">Share:</span> <span>Romania hub 1</span>
+          <span class="share-text">Share: </span><span class="share-link">Romania hub 1</span>
         </a>
       </div>
       <div class="link-item">
         <a href="https://t.me/ROhub2" target="_blank">
           <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram">
-          <span class="share-text">Share:</span> <span>Romania hub 2 (full RO)</span>
+          <span class="share-text">Share: </span><span class="share-link">Romania hub 2 (full RO)</span>
         </a>
       </div>
     </div>
     <div class="rules">
-      <h2>📜 Regulamentul <span>Grupului</span> ⚠️</h2>
+      <h2>📜 Regulamentul <span>Grupului</span> ⚠️</h2> <!-- Only 'Grupului' is orange -->
       <p>🔞 INTERZIS MINORI ➡️ BAN</p>
       <p>🚫 Gore, Zoo, Pedo, Accidente auto, Spam, Flood ➡️ BAN</p>
       <p>🚫 Reclame la alte grupuri ➡️ BAN</p>
