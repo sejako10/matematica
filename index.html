@@ -10,11 +10,11 @@
             color: white;
             font-family: Arial, sans-serif;
             text-align: center;
-            padding: 10px; /* Reducem padding-ul pentru ecrane mici */
+            padding: 10px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: flex-start; /* Aliniem conținutul la început pentru a evita scroll-ul inutil */
+            justify-content: flex-start;
             min-height: 100vh;
         }
 
@@ -23,15 +23,15 @@
         }
 
         .logo {
-            max-width: 200px; /* Reducem dimensiunea logo-ului pentru ecrane mici */
+            max-width: 250px; /* Dimensiune ajustată */
             width: 100%;
             height: auto;
             display: block;
         }
 
         .links {
-            width: 90%; /* Ocupăm 90% din lățimea ecranului */
-            max-width: 500px;
+            width: 95%; /* Lățime ajustată pentru mai mult spațiu */
+            max-width: 600px;
             margin-bottom: 20px;
         }
 
@@ -51,11 +51,12 @@
             color: cyan;
             text-decoration: none;
             font-weight: bold;
-            transition: background 0.3s ease;
+            transition: background 0.3s ease, transform 0.2s ease; /* Adăugat transform pentru animație */
         }
 
         .links a:hover {
             background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.03); /* Animație la hover pentru link-uri */
         }
 
         .links img {
@@ -68,9 +69,14 @@
             background: rgba(255, 255, 255, 0.1);
             border-radius: 8px;
             padding: 15px;
-            width: 90%;
-            max-width: 500px;
+            width: 95%; /* Lățime ajustată */
+            max-width: 600px;
             text-align: left;
+            transition: transform 0.2s ease; /* Animație pentru regulament */
+        }
+
+        .rules:hover {
+            transform: scale(1.02); /* Animație la hover pentru regulament */
         }
 
         .rules h2 {
@@ -78,9 +84,7 @@
             text-align: center;
             margin-bottom: 10px;
             font-size: 1.2em;
-            white-space: nowrap; /* Asigură că textul rămâne pe o singură linie */
-            overflow: hidden; /* Ascunde textul care depășește lățimea */
-            text-overflow: ellipsis; /* Adaugă puncte de suspensie (...) dacă textul este trunchiat */
+            white-space: normal; /* Permite textului să se încadreze pe mai multe linii dacă este necesar */
         }
 
         .rules p {
@@ -100,7 +104,7 @@
         <a href="https://x.com/romaniahub1?s=21&t=v04Wt1pyjLrYNxPC6JBO4g" target="_blank">
             <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/X_logo_2023.svg" alt="X / Twitter">Share: X / Twitter
         </a>
-        <a href="https://chat.whatsapp.com/G8UWQjvbRGr3pLkUWbfE4G" target="_區域">
+        <a href="https://chat.whatsapp.com/G8UWQjvbRGr3pLkUWbfE4G" target="_blank">
             <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">Share: WhatsApp
         </a>
         <a href="https://t.me/+KYr84LWAWJs4OTY0" target="_blank">
