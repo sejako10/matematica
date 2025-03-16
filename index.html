@@ -19,11 +19,6 @@
       flex-direction: column;
       min-height: 100vh;
     }
-    header, footer {
-      text-align: center;
-      padding: 15px;
-      background-color: #111;
-    }
     main {
       flex: 1;
       display: flex;
@@ -32,7 +27,7 @@
       justify-content: center;
       padding: 20px;
     }
-    /* Logo */
+    /* Logo cu efect */
     .logo-container {
       margin-bottom: 20px;
     }
@@ -40,16 +35,19 @@
       max-width: 350px;
       width: 100%;
       height: auto;
+      filter: drop-shadow(0px 0px 10px cyan);
     }
     /* Link-uri */
     .links {
       width: 100%;
       max-width: 600px;
       margin-bottom: 20px;
+      text-align: center;
     }
     .links h2 {
       font-size: 1.5em;
       margin-bottom: 15px;
+      text-align: center;
     }
     .link-item {
       background: rgba(255, 255, 255, 0.1);
@@ -101,24 +99,17 @@
       font-size: 0.9em;
     }
     /* Footer */
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #111;
+    }
     footer p {
       font-size: 0.8em;
-    }
-    /* Media query pentru dispozitive mici */
-    @media (max-width: 600px) {
-      .links h2, .rules h2 {
-        font-size: 1.2em;
-      }
-      .link-item a {
-        font-size: 1em;
-      }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Romania hub</h1>
-  </header>
   <main>
     <div class="logo-container">
       <img src="Romania-hub (1).png" alt="Romania hub Logo" class="logo">
