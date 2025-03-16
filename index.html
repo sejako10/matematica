@@ -73,7 +73,19 @@
       transform: scale(1.05);
       background: rgba(255, 255, 255, 0.2);
     }
-    /* Regulament */
+    /* Culoarea portocalie pentru anumite cuvinte */
+    .orange-text {
+      color: orange;
+    }
+    /* Culoarea albă pentru textul după "Share:" */
+    .white-text {
+      color: white;
+    }
+    /* Spațiu după "Share:" */
+    .share-space {
+      margin-right: 5px; /* Adaugă spațiu după "Share:" */
+    }
+    /* Regulament cu text alb */
     .rules {
       background: rgba(255, 255, 255, 0.1);
       padding: 15px;
@@ -82,6 +94,7 @@
       max-width: 600px;
       margin-bottom: 20px;
       transition: transform 0.3s ease;
+      color: white; /* Text alb pentru întregul regulament */
     }
     .rules:hover {
       transform: scale(1.02);
@@ -106,10 +119,6 @@
     footer p {
       font-size: 0.8em;
     }
-    /* Clasa pentru text portocaliu */
-    .orange-text {
-      color: orange;
-    }
   </style>
 </head>
 <body>
@@ -122,25 +131,25 @@
       <div class="link-item">
         <a href="https://x.com/romaniahub1?s=21&t=v04Wt1pyjLrYNxPC6JBO4g" target="_blank">
           <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/X_logo_2023.svg" alt="X / Twitter">
-          Share: <span class="orange-text">X / Twitter</span>
+          <span class="white-text share-space">Share:</span> <span class="orange-text">X / Twitter</span>
         </a>
       </div>
       <div class="link-item">
         <a href="https://chat.whatsapp.com/G8UWQjvbRGr3pLkUWbfE4G" target="_blank">
           <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-          Share: <span class="orange-text">WhatsApp</span>
+          <span class="white-text share-space">Share:</span> <span class="orange-text">WhatsApp</span>
         </a>
       </div>
       <div class="link-item">
         <a href="https://t.me/+KYr84LWAWJs4OTY0" target="_blank">
           <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram">
-          Share: <span class="orange-text">Romania hub 1</span>
+          <span class="white-text share-space">Share:</span> <span class="orange-text">Romania hub 1</span>
         </a>
       </div>
       <div class="link-item">
         <a href="https://t.me/ROhub2" target="_blank">
           <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram">
-          Share: <span class="orange-text">Romania hub 2 (full RO)</span>
+          <span class="white-text share-space">Share:</span> <span class="orange-text">Romania hub 2 (full RO)</span>
         </a>
       </div>
     </div>
@@ -163,7 +172,7 @@
     </div>
   </main>
   <footer>
-    <p> Copyright © 2025 Romania hub. All rights reserved.</p>
+    <p> Copyright &copy; 2025 Romania hub. All rights reserved.</p>
   </footer>
 </body>
 </html>
