@@ -1,157 +1,178 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <link rel="shortcut icon" href="/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <link rel="manifest" href="site.webmanifest">
-  <title>Romania hub</title>
-  <style>
-    /* Reset și stiluri de bază */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      background-color: #000;
-      color: #fff;
-      font-family: Arial, sans-serif;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
-    main {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-    }
-    /* Logo fără efect */
-    .logo-container {
-      margin-bottom: 20px;
-    }
-    .logo {
-      max-width: 350px;
-      width: 100%;
-      height: auto;
-    }
-    /* Link-uri */
-    .links {
-      width: 100%;
-      max-width: 600px;
-      margin-bottom: 20px;
-      text-align: center;
-    }
-    .links h2 {
-      font-size: 1.5em;
-      margin-bottom: 15px;
-      text-align: center;
-    }
-    .link-item {
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 8px;
-      margin: 10px 0;
-      padding: 12px;
-      transition: background 0.3s ease, transform 0.3s ease;
-      max-width: 400px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .link-item a {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: cyan;
-      text-decoration: none;
-      font-size: 1.1em;
-      font-weight: bold;
-    }
-    .link-item a img {
-      width: 25px;
-      height: 25px;
-      margin-right: 8px;
-    }
-    .link-item:hover {
-      transform: scale(1.05);
-      background: rgba(255, 255, 255, 0.2);
-    }
-    .orange-text { color: orange; }
-    .white-text { color: white; }
-    .share-space { margin-right: 5px; }
-    .rules {
-      background: rgba(255, 255, 255, 0.1);
-      padding: 15px;
-      border-radius: 8px;
-      width: 100%;
-      max-width: 600px;
-      margin-bottom: 20px;
-      transition: transform 0.3s ease;
-    }
-    .rules:hover { transform: scale(1.02); }
-    .rules h2 { color: yellow; text-align: center; margin-bottom: 10px; font-size: 1.3em; }
-    .rules h2 .white-text { color: white; }
-    .rules h2 .orange-text { color: orange; }
-    .rules p { margin: 5px 0; line-height: 1.5; font-size: 0.9em; color: white; }
-    footer {
-      text-align: center;
-      padding: 15px;
-      background-color: #111;
-    }
-    footer p { font-size: 0.8em; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Romania hub</title>
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <style>
+        /* Reset și stiluri de bază */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        /* Logo fără efect */
+        .logo-container {
+            margin-bottom: 20px;
+        }
+        .logo {
+            max-width: 350px;
+            width: 100%;
+            height: auto;
+        }
+        /* Link-uri */
+        .links {
+            width: 100%;
+            max-width: 600px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .links h2 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        .link-item {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            margin: 10px 0; /* Margin-ul original */
+            padding: 12px; /* Padding-ul original */
+            transition: background 0.3s ease, transform 0.3s ease;
+            max-width: 400px; /* Lățime maximă redusă */
+            margin-left: auto; /* Centrare */
+            margin-right: auto; /* Centrare */
+        }
+        .link-item a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: cyan;
+            text-decoration: none;
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+        .link-item a img {
+            width: 25px;
+            height: 25px;
+            margin-right: 8px;
+        }
+        .link-item:hover {
+            transform: scale(1.05);
+            background: rgba(255, 255, 255, 0.2);
+        }
+        /* Culoarea portocalie pentru anumite cuvinte */
+        .orange-text {
+            color: orange;
+        }
+        /* Culoarea albă pentru text */
+        .white-text {
+            color: white;
+        }
+        /* Spațiu după "Share:" */
+        .share-space {
+            margin-right: 5px; /* Adaugă spațiu după "Share:" */
+        }
+        /* Regulament cu text alb pentru "Regulamentul" și portocaliu pentru "Grupului" */
+        .rules {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 600px;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+        .rules:hover {
+            transform: scale(1.02);
+        }
+        .rules h2 {
+            color: yellow; /* Culoarea implicită pentru titlu */
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+        .rules h2 .white-text {
+            color: white; /* Culoarea albă pentru "Regulamentul" */
+        }
+        .rules h2 .orange-text {
+            color: orange; /* Culoarea portocalie pentru "Grupului" */
+        }
+        .rules p {
+            margin: 5px 0;
+            line-height: 1.5;
+            font-size: 0.9em;
+            color: white; /* Text alb pentru întregul regulament */
+        }
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #111;
+        }
+        footer p {
+            font-size: 0.8em;
+        }
+    </style>
 </head>
 <body>
-  <main>
-    <div class="logo-container">
-      <img src="Romania-hub (1).png" alt="Romania hub Logo" class="logo">
-    </div>
-    <div class="links">
-      <h2>⚡️ Official <span class="orange-text">Link</span> ⚡️</h2>
-      <div class="link-item">
-        <a href="https://x.com/romaniahub1?s=21&t=v04Wt1pyjLrYNxPC6JBO4g" target="_blank">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/X_logo_2023.svg" alt="X / Twitter">
-          <span class="white-text share-space">Share:</span> <span class="orange-text">X / Twitter</span>
-        </a>
-      </div>
-      <div class="link-item">
-        <a href="https://chat.whatsapp.com/G8UWQjvbRGr3pLkUWbfE4G" target="_blank">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-          <span class="white-text share-space">Share:</span> <span class="orange-text">WhatsApp</span>
-        </a>
-      </div>
-      <div class="link-item">
-        <a href="https://t.me/+KYr84LWAWJs4OTY0" target="_blank">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram">
-          <span class="white-text share-space">Share:</span> <span class="orange-text">Romania hub 1</span>
-        </a>
-      </div>
-      <div class="link-item">
-        <a href="https://t.me/ROhub2" target="_blank">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram">
-          <span class="white-text share-space">Share:</span> <span class="orange-text">Romania hub 2 (full RO)</span>
-        </a>
-      </div>
-    </div>
-    <div class="rules">
-      <h2>📜 <span class="white-text">Regulamentul</span> <span class="orange-text">Grupului</span> ⚠️</h2>
-      <p>🔞 INTERZIS MINORI ➡️ BAN</p>
-      <p>🚫 Gore, Zoo, Pedo, Accidente auto, Spam, Flood ➡️ BAN</p>
-      <p>🚫 Reclame la alte grupuri ➡️ BAN</p>
-      <p>🚫 Publicitate fără acordul administratorilor ➡️ BAN</p>
-      <p>🚫 Jigniri la adresa ADMINILOR ➡️ MUTE/BAN</p>
-      <p>⭐️ Fii concis și la obiect în mesajele tale.</p>
-      <p>⚠️ BAN pentru cine își postează PULA!</p>
-      <p>🔄 Respectă pentru a fi respectat!</p>
-    </div>
-  </main>
-  <footer>
-    <p> Copyright &copy; 2025 Romania hub. All rights reserved.</p>
-  </footer>
-</body>
-</html>
+    <main>
+        <div class="logo-container">
+            <img src="Romania-hub (1).png" alt="Romania hub Logo" class="logo">
+        </div>
+        <div class="links">
+            <h2>⚡️ Official <span class="orange-text">Link</span> ⚡️</h2>
+            <div class="link-item">
+                <a href="https://x.com/romaniahub1?s=21&t=v04Wt1pyjLrYNxPC6JBO4g" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/X_logo_2023.svg" alt="X / Twitter">
+                    <span class="white-text share-space">Share:</span> <span class="orange-text">X / Twitter</span>
+                </a>
+            </div>
+            <div class="link-item">
+                <a href="https://chat.whatsapp.com/G8UWQjvbRGr3pLkUWbfE4G" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+                    <span class="white-text share-space">Share:</span> <span class="orange-text">WhatsApp</span>
+                </a>
+            </div>
+            <div class="link-item">
+                <a href="https://t.me/+KYr84LWAWJs4OTY0" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram">
+                    <span class="white-text share-space">Share:</span> <span class="orange-text">Romania hub 1</span>
+                </a>
+            </div>
+            <div class="link-item">
+                <a href="https://t.me/ROhub2" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram">
+                    <span class="white-text share-space">Share:</span> <span class="orange-text">Romania hub 2 (full RO)</span>
+                </a>
+            </div>
+        </div>
+        <div class="rules">
+            <h2>📜 <span class="white-text">Regulamentul</span> <span class="orange-text">Grupului</span> ⚠️</h2>
+            <p>🔞 INTERZIS MINORI ➡️ BAN</p>
+            <p>🚫 Gore, Zoo, Pedo, Accidente auto, Spam, Flood ➡️ BAN</p>
+            <p>🚫 Reclame la alte grupuri ➡️ BAN</p>
+            <p>🚫 Publicitate fără acordul administratorilor ➡️ BAN</p>
+            <p>🚫 Jigniri la adresa ADMINILOR ➡️ MUTE/BAN</p>
+            <p>🚫 Limbaj obscen este descurajat și poate duce la sancțiuni ➡️ MUTE/BAN</p>
+            <p>🚫 Limbaj ofensator sau discriminatoriu (rasist, sexist etc.) ➡️ MUTE/
