@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Romania Hub</title>
+    <style>
+        /* ... stilurile tale existente ... */
+        .aznude-copyright {
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+            display: flex;
+            align-items: center;
+            font-size: 0.8em;
+        }
+
+        .aznude-logo {
+            max-width: 50px;
+            height: auto;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo-container">
+        <img src="Romania-hub (1).png" alt="Romania Hub Logo" class="logo">
+    </div>
+
+    <div class="links">
+        </div>
+
+    <div class="rules">
+        </div>
+
+    <div class="aznude-copyright">
+        <img src="aznude-logo.png" alt="AZNude Logo" class="aznude-logo">
+        <span>© 2025 - AZNude</span>
+    </div>
+</body>
+</html>
